@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #f2f2f2;
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+        form{
+            background-color: #fff;
+            width: 60%;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 5px #ccc;
+        }
+        label{
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        input{
+            width: 80%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 2px 2px 5px #ccc;
+            
+        }
+        button[type=submit]{
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        button[type=submit]:hover{
+            background-color: #45a049;
+        }
+        h2{
+            text-align: center;
+        }
+        input{
+            margin-bottom: 20px;
+            margin-left: 8%;
+            
+
+        }
+        .back{
+            background-color: #c90606;
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            float: right;
+        }
+        .back:hover{
+            background-color: #801414;
+        }
+        .back a{
+            text-decoration: none;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <form action="/create" method="POST">
+    <h2>tambah pengguna baru</h2>
+
+        
+        <input type="text" name="name" id="name" placeholder="nama" required><br>
+        
+        <input type="email" name="email" id="email" placeholder="email"><br>
+        
+        <input type="text" name="phone" id="phone" placeholder="phone"><br> 
+        <button type="submit" onclick="return tersimpan()">tambahkan</button>
+        <button class="back"><a href="/">kembali</button>
+
+    </form>
+</body>
+<script>
+    function tersimpan() {
+        alert('data tersimpan');
+    }
+    
+</script>
+</html>

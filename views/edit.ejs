@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curd nd js</title>
+</head>
+<style>
+     body{
+            background-color: #f2f2f2;
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+        form{
+            background-color: #fff;
+            width: 60%;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 5px #ccc;
+        }
+        label{
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        input{
+            width: 80%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 2px 2px 5px #ccc;
+            
+        }
+        button[type=submit]{
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            margin-left: 8%;
+        }
+        button[type=submit]:hover{
+            background-color: #45a049;
+        }
+        h2{
+            text-align: center;
+        }
+        input{
+            margin-bottom: 20px;
+            margin-left: 8%;
+            
+
+        }
+        .back{
+            background-color: #c90606;
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            
+        }
+        .back:hover{
+            background-color: #801414;
+        }
+        .back a{
+            text-decoration: none;
+            color: white;
+        }
+</style>
+<body>
+    
+    <form action="/update/<%=user.id%>" method="POST">
+        <h2>Edit Data Pengguna</h2>
+        
+        <input type="text" placeholder="nama" name="name" id="name" required value="<%=user.name%>"><br>
+        
+        <input type="email" placeholder="email" name="email" id="email" value="<%=user.email%>"><br>
+        
+        <input type="text" placeholder="number" name="phone" id="phone" value="<%=user.phone%>"><br> 
+        <button type="submit" onclick= "return edit ('<%= user.id %>')">edit</button>
+        
+
+    </form>
+</body>
+<script>
+    function edit(id){
+        if(confirm('apakah anda yakin ingin mengedit data ini?')){
+            window.location.href = '/';   
+        }  else {
+            window.location.href = '/index.ejs';
+        }
+    }
+</script>
+</html>
